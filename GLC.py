@@ -35,14 +35,15 @@ class GLC:
             for simboloDir in self.producao[simboloEsq]:
                 if all(simbolo in ferteis for simbolo in simboloDir):
                     filtradas.append(simboloDir)
-                if filtradas:
-                    self.producao[simboloEsq] = filtradas
-                else:
-                    del self.producao[simboloEsq]
-                    self.variaveis.discard(simboloEsq)
+
+            if filtradas:
+                self.producao[simboloEsq] = filtradas
+            else:
+                del self.producao[simboloEsq]
+                self.variaveis.discard(simboloEsq)
 
     def eliminar_inalcancaveis(self):
-        alcancaveis = set(self.inicial)
+        alcancaveis = {self.inicial}
 
         encontrou_novo = True
         while encontrou_novo:
