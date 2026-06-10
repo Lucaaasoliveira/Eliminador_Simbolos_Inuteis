@@ -73,17 +73,6 @@ class GLC:
             for simboloDir in self.producao[simboloEsq]:
                 if all(simbolo in ferteis_total for simbolo in simboloDir):
                     filtradas.append(simboloDir)
-<<<<<<< HEAD
-
-            if filtradas:
-                self.producao[simboloEsq] = filtradas
-            else:
-                del self.producao[simboloEsq]
-                self.variaveis.discard(simboloEsq)
-
-    def eliminar_inalcancaveis(self):
-        alcancaveis = {self.inicial}
-=======
             if filtradas:
                 self.producao[simboloEsq] = filtradas
             else:
@@ -95,7 +84,6 @@ class GLC:
 
 
     def eliminar_inalcancaveis(self):
->>>>>>> c82e6c3 (Update: Atualizado a classe GLC para printar passo a passo da eliminação de símbolos inférteis)
 
         print("Identificação de Símbolos Alcançáveis")
         print(f"{'Iteração':<12} | {'Vn Alcançáveis':<20} | {'Vt Alcançáveis':<20}")
@@ -167,20 +155,6 @@ class GLC:
 
 # função para que roda as outras funções necessárias para a exibição da gramática original, da eliminação e da simplificação (e posterior exibição simplificada.)
 def rodar_teste(titulo, gramatica):
-<<<<<<< HEAD
-        print("-" * 50)
-        print(f"Teste: {titulo}")
-        print("-" * 50)
-        print("Gramatica Original:")
-        gramatica.exibir()
-        gramatica.simplificar()
-        print("Gramática simplificada (livre de simbolos inúteis):")
-        gramatica.exibir()
-
-
-
-    
-=======
     print("=" * 60)
     print(f"EXECUÇÃO DO TESTE: {titulo}")
     print("=" * 60)
@@ -192,4 +166,3 @@ def rodar_teste(titulo, gramatica):
     print("GRAMÁTICA SIMPLIFICADA FINAL:")
     gramatica.exibir()
     print("\n\n")
->>>>>>> c82e6c3 (Update: Atualizado a classe GLC para printar passo a passo da eliminação de símbolos inférteis)
