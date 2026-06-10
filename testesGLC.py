@@ -4,7 +4,7 @@ gramatica1 = GLC(
     variaveis=['S', 'A', 'B'],
     terminais=['a', 'b'],
     producao={
-        'S': [['a', 'B'], ['B']],
+        'S': [['a', 'B'], ['B'], ['']],
         'A': [['a']],
         'B': [['b', 'B']]
     },
